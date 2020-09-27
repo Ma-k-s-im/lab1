@@ -1,18 +1,17 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+# Исключить все файлы с расширение .a
+*.a
 
-# Other files and folders
-.settings/
+# Но отслеживать файл lib.a даже если он подпадает под исключение выше
+!lib.a
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+# Исключить файл TODO в корневой директории, но не файл в subdir/TODO
+/TODO
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# Игнорировать все файлы в директории build/
+build/
+
+# Игнорировать файл doc/notes.txt, но не файл doc/server/arch.txt
+doc/*.txt
+
+# Игнорировать все .txt файлы в директории doc/
+doc/**/*.txt
